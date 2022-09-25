@@ -25,10 +25,10 @@
   display: flex;
   overflow: hidden;
 }
-.card h1,
+/* .card h1,
 p {
   text-align: justify;
-}
+} */
 .card h1 {
   margin-bottom: 20px;
 }
@@ -47,7 +47,7 @@ p {
 
 .card_stat {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 .card_right {
   width: 50%;
@@ -76,4 +76,40 @@ p {
 }
 .card:hover .card_right img {
   filter: grayscale(0%);
+}
+@media only screen and (max-width: 800px) {
+  .card_right {
+    width: 33.33%;
+  }
+  .card_left {
+    width: 66.37%;
+  }
+}
+@media only screen and (max-width: 635px) {
+  .card {
+    flex-direction: column-reverse;
+    height: 90vh;
+  }
+  .card_left,
+  .card_right {
+    width: 100%;
+  }
+  .card_stat {
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card_left {
+    padding: 15px;
+  }
+  .card_left h1 {
+    font-size: 25px;
+  }
+  .card_stat h2 {
+    font-size: 20px;
+  }
+  .card_left p,
+  .card_stat p {
+    font-size: 12px;
+  }
 }
